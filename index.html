@@ -70,17 +70,17 @@ ul{list-style:none}
 .ideo-list{display:flex;flex-direction:column;gap:14px}
 .ideo{cursor:pointer;border-radius:16px;overflow:hidden;background:#fff;border:1.5px solid var(--bd);box-shadow:0 4px 16px rgba(61,36,117,.05);transition:box-shadow .2s}
 .ideo:hover{box-shadow:0 8px 24px rgba(61,36,117,.1)}
-.ideo-head{display:grid;grid-template-columns:90px 1fr 40px;align-items:center;gap:10px;padding:14px 16px 14px 0;position:relative;min-height:96px}
-.ideo-left{position:relative;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;padding:0 0 12px 0}
-.ideo-strip{position:absolute;left:0;top:0;bottom:0;width:64px;border-radius:16px 0 0 16px}
+.ideo-head{display:grid;grid-template-columns:100px 1fr 40px;align-items:center;gap:14px;padding:14px 16px 14px 0;position:relative;min-height:98px}
+.ideo-left{position:relative;align-self:stretch;display:flex;align-items:center;justify-content:flex-end;padding:0}
+.ideo-strip{position:absolute;left:0;top:0;bottom:0;width:58px;border-radius:16px 0 0 16px}
 .ideo-c1 .ideo-strip,.ideo-c4 .ideo-strip{background:var(--p)}
 .ideo-c2 .ideo-strip,.ideo-c5 .ideo-strip{background:var(--t)}
 .ideo-c3 .ideo-strip{background:var(--g)}
-.ideo-num{position:absolute;left:14px;top:14px;font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;line-height:1;z-index:1}
-.ideo-num small{display:block;font-size:.46rem;letter-spacing:.12em;opacity:.85;font-weight:700;margin-bottom:2px}
-.ideo-num b{font-size:1.15rem;font-weight:900}
-.ideo-icon{position:relative;z-index:2;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:translateX(14px)}
-.ideo-icon img{width:54px;height:54px;display:block;border-radius:50%;box-shadow:0 3px 9px rgba(61,36,117,.2)}
+.ideo-num{position:absolute;left:10px;top:15px;font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;line-height:1;z-index:1}
+.ideo-num small{display:block;font-size:.42rem;letter-spacing:.08em;opacity:.85;font-weight:700;margin-bottom:3px}
+.ideo-num b{font-size:1rem;font-weight:900}
+.ideo-icon{position:relative;z-index:2;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:translateX(18px)}
+.ideo-icon img{width:50px;height:50px;display:block;border-radius:50%;box-shadow:0 3px 9px rgba(61,36,117,.2)}
 .ideo-c1 .ideo-icon svg,.ideo-c4 .ideo-icon svg{stroke:var(--p)}
 .ideo-c2 .ideo-icon svg,.ideo-c5 .ideo-icon svg{stroke:var(--t)}
 .ideo-c3 .ideo-icon svg{stroke:var(--g)}
@@ -242,6 +242,27 @@ footer{background:var(--pd);color:#fff;padding:28px 0 18px}
 .apc-t{color:#fff;font-weight:800;font-size:.95rem;margin-bottom:3px}
 .apc-d{color:rgba(255,255,255,.82);font-size:.74rem;line-height:1.5}
 @media(min-width:769px){.ach-photo-grid{grid-template-columns:repeat(4,1fr)}.apc img{height:180px}}
+/* COUNTDOWN BAND */
+.cdband{background:linear-gradient(135deg,var(--pd),var(--p));padding:26px 4%}
+.cdwrap{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+.cdcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px 16px;backdrop-filter:blur(4px)}
+.cdcard-h{display:flex;align-items:center;gap:7px;margin-bottom:13px}
+.cdcard-h .dot{width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 0 4px rgba(255,180,0,.25);flex-shrink:0}
+.cdcard-h.teal .dot{background:var(--t);box-shadow:0 0 0 4px rgba(39,179,168,.25)}
+.cdcard-t{font-size:.82rem;font-weight:700;color:#fff;letter-spacing:.04em}
+.cd-slogan{display:inline-block;color:var(--g);font-size:1.05rem;font-weight:900;margin-left:8px;letter-spacing:.03em;vertical-align:baseline}
+@media(min-width:769px){.cd-slogan{font-size:1.3rem}}
+.cdcard-sub{font-size:.64rem;color:rgba(255,255,255,.6);margin-top:2px;letter-spacing:.08em}
+.cd-units{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.cd-u{background:rgba(0,0,0,.18);border-radius:11px;padding:10px 4px;text-align:center}
+.cd-u b{display:block;font-family:'Montserrat',sans-serif;font-size:1.55rem;font-weight:900;color:#fff;line-height:1.05;font-variant-numeric:tabular-nums}
+.cd-u span{display:block;font-size:.6rem;color:rgba(255,255,255,.65);margin-top:4px;letter-spacing:.05em}
+.cd-days{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.cd-days b{font-family:'Montserrat',sans-serif;font-size:2.7rem;font-weight:900;color:var(--g);line-height:1;font-variant-numeric:tabular-nums}
+.cd-days span{font-size:.85rem;color:#fff;font-weight:700}
+.cd-note{font-size:.62rem;color:rgba(255,255,255,.55);margin-top:9px;line-height:1.5}
+@media(max-width:520px){.cdwrap{grid-template-columns:1fr}.cd-u b{font-size:1.35rem}.cd-days b{font-size:2.4rem}}
+@media(min-width:769px){.cdband{padding:34px 4%}.cd-u b{font-size:2rem}.cd-days b{font-size:3.2rem}}
 </style>
 </head>
 <body>
@@ -315,6 +336,26 @@ footer{background:var(--pd);color:#fff;padding:28px 0 18px}
         <a href="#kokoro" class="btn btn-o">五個理念</a>
         <a href="https://line.me/R/ti/p/@288tller" class="btn btn-t" target="_blank">LINE 私訊</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 倒數計時 + 服務天數（皆依當下日期自動計算，無需人工修改） -->
+<section class="cdband" id="countdown">
+  <div class="cdwrap">
+    <div class="cdcard">
+      <div class="cdcard-h"><span class="dot"></span><div><div class="cdcard-t">距離投票日 11/28<span class="cd-slogan">一起讓竹山更好</span></div><div class="cdcard-sub">2026.11.28　竹山見</div></div></div>
+      <div class="cd-units">
+        <div class="cd-u"><b id="cd-d">--</b><span>天</span></div>
+        <div class="cd-u"><b id="cd-h">--</b><span>時</span></div>
+        <div class="cd-u"><b id="cd-m">--</b><span>分</span></div>
+        <div class="cd-u"><b id="cd-s">--</b><span>秒</span></div>
+      </div>
+    </div>
+    <div class="cdcard">
+      <div class="cdcard-h teal"><span class="dot"></span><div><div class="cdcard-t">服務竹山天數</div><div class="cdcard-sub">持續累積中</div></div></div>
+      <div class="cd-days"><b id="cd-serve">----</b><span>天</span></div>
+      <div class="cd-note">自 2006 年投入竹山基層服務起算，每天持續增加。</div>
     </div>
   </div>
 </section>
@@ -410,6 +451,7 @@ footer{background:var(--pd);color:#fff;padding:28px 0 18px}
     <div class="ideo-feat"><svg width="20" height="20" viewBox="0 0 40 40" fill="none" stroke-width="2.2"><use href="#i-chk"/></svg><span>推動竹藝文創品牌化，擦亮竹山招牌</span></div>
     <div class="ideo-feat"><svg width="20" height="20" viewBox="0 0 40 40" fill="none" stroke-width="2.2"><use href="#i-chk"/></svg><span>建置小農市集平台，串連在地農產與觀光</span></div>
     <div class="ideo-feat"><svg width="20" height="20" viewBox="0 0 40 40" fill="none" stroke-width="2.2"><use href="#i-chk"/></svg><span>持續推進山林特色觀光，重建地方自信</span></div>
+
   </div></div>
 </div></div>
     <div style="margin-top:36px">
@@ -486,7 +528,7 @@ footer{background:var(--pd);color:#fff;padding:28px 0 18px}
       <p style="color:rgba(255,255,255,.7)">16年深耕竹山每一里，120+件建設有記錄、有成果，累計爭取18億3,800萬以上建設經費。</p>
     </div>
     <div class="stat-grid4">
-      <div class="sc gold"><div class="sc-n">7,440<span class="sc-u"> 天</span></div><div class="sc-l">服務竹山天數</div></div>
+      <div class="sc gold"><div class="sc-n"><span id="serve-stat">7,440</span><span class="sc-u"> 天</span></div><div class="sc-l">服務竹山天數</div></div>
       <div class="sc teal"><div class="sc-n">120<span class="sc-u"> 件+</span></div><div class="sc-l">建設提案落地</div></div>
       <div class="sc gold"><div class="sc-n">18.38<span class="sc-u"> 億+</span></div><div class="sc-l">爭取建設總經費</div></div>
       <div class="sc teal"><div class="sc-n">2<span class="sc-u"> 屆</span></div><div class="sc-l">縣議員連任</div></div>
@@ -752,6 +794,34 @@ document.querySelectorAll('[data-ideo]').forEach(function(el) {
     if (!isOpen) el.classList.add('open');
   });
 });
+
+/* 倒數計時 + 服務天數：依使用者裝置當下時間自動計算，無需人工修改 */
+(function(){
+  var ELECTION = new Date('2026-11-28T08:00:00+08:00'); // 投票日（早上8點開票概念）
+  var SERVE_START = new Date('2006-02-01T00:00:00+08:00'); // 投入竹山服務起算
+  function pad(n){ return (n<10?'0':'')+n; }
+  function fmt(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function tick(){
+    var now = new Date();
+    // 投票倒數
+    var diff = ELECTION - now;
+    if(diff < 0) diff = 0;
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor(diff%86400000/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    var dd=document.getElementById('cd-d'); if(dd){dd.textContent=d;}
+    var hh=document.getElementById('cd-h'); if(hh){hh.textContent=pad(h);}
+    var mm=document.getElementById('cd-m'); if(mm){mm.textContent=pad(m);}
+    var ss=document.getElementById('cd-s'); if(ss){ss.textContent=pad(s);}
+    // 服務竹山天數（持續增加）
+    var days = Math.floor((now - SERVE_START)/86400000);
+    var sv=document.getElementById('cd-serve'); if(sv){sv.textContent=fmt(days);}
+    var st=document.getElementById('serve-stat'); if(st){st.textContent=fmt(days);}
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 </script>
 </body>
 </html>
